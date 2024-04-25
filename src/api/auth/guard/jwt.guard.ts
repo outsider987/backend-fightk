@@ -11,14 +11,14 @@ export class JwtGuard extends AuthGuard('jwt') {
    * @param {ExecutionContext} context - The execution context.
    * @return {boolean} - Whether the request is authorized.
    */
-  canActivate(context: ExecutionContext) {
+  canActivate(context: ExecutionContext): boolean {
     const request = context.switchToHttp().getRequest<Request>();
     const authorization = request.headers['authorization'];
     const isBearerToken = authorization?.search('Bearer ') === 0;
     if (!authorization || !isBearerToken) {
       throw new ApplicationErrorException('4007');
     }
-    return super.canActivate(context);
+    return !!super.canActivate(context);
   }
 
   /**

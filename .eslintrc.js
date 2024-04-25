@@ -10,7 +10,7 @@ module.exports = {
     "@typescript-eslint/eslint-plugin",
     'prettier'
   ],
-  extends: ["google",'prettier'],
+  extends: [,'prettier'],
   root: true,
   env: {
     node: true,

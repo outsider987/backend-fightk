@@ -1,5 +1,5 @@
 import { createHash, randomInt } from 'crypto';
-import * as moment from 'moment-timezone';
+import moment from 'moment';
 
 const colours = {
   reset: '\x1b[0m',
