@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { InjectRepository } from '@nestjs/typeorm';
 import * as nodemailer from 'nodemailer';
-import { User } from 'src/entities/user.entity';
+import { User } from '../../entities/user.entity';
 import { VerifyEmail } from 'src/entities/verifyEmail.entity';
 import { Repository } from 'typeorm';
 

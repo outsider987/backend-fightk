@@ -26,7 +26,7 @@ import {
 } from './dtos/resetPassword.dto';
 import { JwtPayload } from './interface';
 import { InjectRepository } from '@nestjs/typeorm';
-import { User } from 'src/entities/user.entity';
+import { User } from '../../entities/user.entity';
 import { Repository } from 'typeorm/repository/Repository';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import {
