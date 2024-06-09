@@ -4,7 +4,7 @@ import {
   HealthCheck,
   TypeOrmHealthIndicator
 } from '@nestjs/terminus';
-import Bugsnag from '@bugsnag/js';
+// import Bugsnag from '@bugsnag/js';
 import { promises as fsPromises, existsSync as fsExistsSync } from 'fs';
 import { join } from 'path';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
@@ -78,7 +78,7 @@ export class HealthChecksController {
       success: errors.length === 0,
       db: dbCheckResult,
 
-      bugsnag: Bugsnag.isStarted(),
+      // bugsnag: Bugsnag.isStarted(),
       gitBranch: gitBranch.trim(),
       gitCommitID: gitCommitID.trim(),
       buildTime: buildTime.trim(),

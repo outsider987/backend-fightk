@@ -7,7 +7,7 @@ import {
   HttpStatus
 } from '@nestjs/common';
 import { Response } from 'express';
-import Bugsnag from '@bugsnag/js';
+// import Bugsnag from '@bugsnag/js';
 import { failureResponse } from '../utils/response';
 
 @Catch()
@@ -53,9 +53,9 @@ export class AllExceptionFilter implements ExceptionFilter {
       jsonResponse = exception.getResponse();
     } else {
       // Send all Unhandled Exceptions to Bugsnag
-      Bugsnag.addMetadata('request', request);
-      Bugsnag.addMetadata('response', response);
-      Bugsnag.notify(exception);
+      // Bugsnag.addMetadata('request', request);
+      // Bugsnag.addMetadata('response', response);
+      // Bugsnag.notify(exception);
       console.log(exception);
 
       if (process.env.APP_ENV !== 'production') {

@@ -7,10 +7,10 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
  */
 export function setupSwagger(app) {
   const options = new DocumentBuilder()
-    .setTitle('AHA TEST')
-    .setDescription('FOR AHA TEST')
+    .setTitle('K Moment TEST')
+    .setDescription('FOR K Moment TEST')
     .setVersion('1.0')
-    .addTag('aha')
+    .addTag('k-moment')
     .build();
 
   const document = SwaggerModule.createDocument(app, options);

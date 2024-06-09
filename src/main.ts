@@ -41,7 +41,7 @@ async function bootstrap() {
     ]
   });
   app.use(cookieParser());
-  // setupSwagger(app);
+  setupSwagger(app);
   await app.listen(3000);
 }
 bootstrap();

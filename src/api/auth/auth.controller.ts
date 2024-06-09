@@ -150,8 +150,8 @@ export class AuthController {
     res.cookie('refreshToken', token.refreshToken);
 
     const frontEndPoint = this.config.get('frontEndPoint');
-    const redirectUrl = `${frontEndPoint}`;
-    console.log(' googleLoginCallback redirectUrl', redirectUrl);
+    const redirectUrl = `${frontEndPoint}/oauth?token=${token.accessToken}`;
+   
     await res.redirect(302, redirectUrl);
   }
 
